@@ -141,12 +141,13 @@ a:hover {
   text-decoration: none;
 }
 
-.logo-mark {
-  width: 56px;
+.logo-lockup {
   height: 56px;
+  width: auto;
   display: block;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.22));
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.18));
 }
 
 .logo-text {

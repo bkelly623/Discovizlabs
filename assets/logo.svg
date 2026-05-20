@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="DiscovizLabs logo">
+  <defs>
+    <linearGradient id="g" x1="20" y1="20" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="0.5" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="64" cy="48" r="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.0"/>
+    </radialGradient>
+  </defs>
+
+  <path d="M64 0 L128 64 L64 128 L0 64 Z" fill="url(#g)"/>
+  <path d="M64 10 L118 64 L64 118 L10 64 Z" fill="#0a0e1a" fill-opacity="0.35"/>
+
+  <circle cx="64" cy="64" r="28" fill="#0a0e1a" fill-opacity="0.9"/>
+  <circle cx="64" cy="64" r="16" fill="url(#g)" fill-opacity="0.95"/>
+  <circle cx="72" cy="56" r="5" fill="#ffffff" fill-opacity="0.9"/>
+  <circle cx="64" cy="64" r="48" fill="url(#glow)"/>
+</svg>

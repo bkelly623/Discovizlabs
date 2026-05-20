@@ -19,7 +19,7 @@
         "@type": "Organization",
         "name": "DiscovizLabs",
         "url": "https://discovizlabs.com",
-        "logo": "https://discovizlabs.com/assets/logo.png",
+        "logo": "https://discovizlabs.com/assets/logo.svg",
         "description": "The definitive authority in AI discoverability. We help businesses become visible to AI systems and LLMs.",
         "sameAs": [
             "https://twitter.com/discovizlabs",
@@ -40,7 +40,7 @@
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
             <a href="index.html" class="logo" aria-label="DiscovizLabs Home">
-                <span class="logo-mark">◈</span>
+                <img class="logo-mark" src="assets/discovizlabs-mark.svg" alt="DiscovizLabs" width="40" height="40" decoding="async" fetchpriority="high">
                 <span class="logo-text">DiscovizLabs</span>
             </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -380,7 +380,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <span class="logo-mark">◈</span>
+                        <img class="logo-mark" src="assets/discovizlabs-mark.svg" alt="DiscovizLabs" width="40" height="40" decoding="async" loading="lazy">
                         <span class="logo-text">DiscovizLabs</span>
                     </a>
                     <p>The definitive authority in AI discoverability. Making businesses visible to the AI systems that matter.</p>
@@ -425,7 +425,7 @@
     <script>
     // Mobile nav toggle
     document.querySelector('.nav-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('active');
         this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
     });
 

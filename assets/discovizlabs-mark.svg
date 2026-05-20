@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="DiscovizLabs mark">
-  <defs>
-    <linearGradient id="g" x1="18" y1="18" x2="110" y2="110" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#8b5cf6"/>
-      <stop offset="0.5" stop-color="#3b82f6"/>
-      <stop offset="1" stop-color="#06b6d4"/>
-    </linearGradient>
-  </defs>
+  <!-- Legible on dark backgrounds; geometry stays comfortably inside viewBox -->
 
-  <!-- Orbit ring (kept inside viewBox; no padding) -->
-  <path d="M94.6 30.4
-           A52 52 0 1 1 33.4 97.6"
-        fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/>
+  <!-- Radar ring segment -->
+  <circle cx="64" cy="64" r="54" fill="none" stroke="#06b6d4" stroke-width="12" stroke-linecap="round"
+          stroke-dasharray="210 140" transform="rotate(-35 64 64)"/>
 
-  <!-- DV / 'D' monogram for Discoviz -->
-  <path d="M46 38
-           L46 90
-           L72 90
-           C88 90 98 79 98 64
-           C98 49 88 38 72 38
-           Z"
-        fill="none" stroke="#0a0e1a" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Clear 'D' monogram -->
+  <path d="M36 28 H66
+           C92 28 112 44 112 64
+           C112 84 92 100 66 100
+           H36 Z"
+        fill="#f0f4f8"/>
 
-  <!-- Inner highlight stroke to keep it readable on dark backgrounds -->
-  <path d="M46 44
-           L46 84
-           L72 84
-           C84 84 92 75 92 64
-           C92 53 84 44 72 44
-           Z"
-        fill="none" stroke="url(#g)" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Inner counter -->
+  <path d="M48 40 H66
+           C84 40 98 51 98 64
+           C98 77 84 88 66 88
+           H48 Z"
+        fill="#0a0e1a"/>
 
-  <!-- 'Viz' dot (discoverability signal) -->
-  <circle cx="96" cy="34" r="6" fill="url(#g)"/>
+  <!-- Signal dot -->
+  <circle cx="102" cy="34" r="6" fill="#3b82f6"/>
 </svg>

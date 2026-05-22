@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transcripts | DiscovizLabs</title>
+  <meta name="description" content="Daily transcripts from DiscovizLabs: AI discoverability (GEO) experiments, frameworks, and field notes." />
+  <link rel="canonical" href="https://discovizlabs.com/transcripts" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "DiscovizLabs Transcripts",
+    "description": "Daily transcripts and experiment notes about AI discoverability (GEO).",
+    "url": "https://discovizlabs.com/transcripts",
+    "publisher": {"@type": "Organization", "name": "DiscovizLabs", "url": "https://discovizlabs.com"}
+  }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" aria-label="DiscovizLabs Home">
+        <img class="logo-lockup" src="../assets/logo-lockup.webp" alt="DiscovizLabs" height="56" decoding="async" fetchpriority="high" />
+        <span class="logo-text">DiscovizLabs</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../ai-discoverability.html">AI Discoverability</a></li>
+        <li><a href="../ai-discoverability-labs.html">AI Disco Labs</a></li>
+        <li><a href="index.html" class="active">Transcripts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" role="banner">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Daily posts
+        </div>
+        <h1 class="hero-title">Transcripts</h1>
+        <p class="hero-subtitle">One page per episode: summary → takeaways → definitions → FAQ → transcript.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header">
+          <span class="section-tag">Latest</span>
+          <h2 class="section-title">Newest transcript posts</h2>
+          <p class="section-subtitle">(We’ll append here daily.)</p>
+        </div>
+
+        <div class="cards-grid grid-3">
+          <article class="card">
+            <h3 class="card-title"><a href="../ai-discoverability.html">AI Discoverability: How AI Decides Who Gets Recommended</a></h3>
+            <p class="card-description">Primer + transcript: why AI search is the recommendation layer, and the 3-step baseline checklist.</p>
+          </article>
+        </div>
+
+        <p style="margin-top: 2rem; opacity: .9;">
+          Want the daily lab hub? <a href="../ai-discoverability-labs.html">AI Disco Labs</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
+

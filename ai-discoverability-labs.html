@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Disco Labs | DiscovizLabs</title>
+  <meta name="description" content="AI Disco Labs: daily experiments, notes, and transcripts documenting what actually moves AI discoverability (GEO) in the real world." />
+  <link rel="canonical" href="https://discovizlabs.com/ai-disco-labs" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "AI Disco Labs",
+    "description": "Daily experiments and transcripts about AI discoverability (GEO).",
+    "url": "https://discovizlabs.com/ai-disco-labs",
+    "publisher": {"@type": "Organization", "name": "DiscovizLabs", "url": "https://discovizlabs.com"}
+  }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="DiscovizLabs Home">
+        <img class="logo-lockup" src="assets/logo-lockup.webp" alt="DiscovizLabs" height="56" decoding="async" fetchpriority="high" />
+        <span class="logo-text">DiscovizLabs</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ai-discoverability.html">AI Discoverability</a></li>
+        <li><a href="ai-discoverability-labs.html" class="active">AI Disco Labs</a></li>
+        <li><a href="transcripts/index.html">Transcripts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" role="banner">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Daily experiments + transcripts
+        </div>
+        <h1 class="hero-title">AI Disco Labs</h1>
+        <p class="hero-subtitle">
+          We’re not theorizing. We’re running experiments with real businesses to measure what actually moves AI visibility.
+          This is the public lab notebook.
+        </p>
+        <div class="hero-cta-group">
+          <a href="transcripts/index.html" class="btn btn-primary btn-lg">Browse transcripts</a>
+          <a href="ai-discoverability.html" class="btn btn-outline btn-lg">Read the primer</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header">
+          <span class="section-tag">How to use this</span>
+          <h2 class="section-title">One page per transcript. One hub to browse.</h2>
+          <p class="section-subtitle">
+            For maximum AI discoverability, each episode/transcript gets its own URL so AI systems can cite it cleanly.
+            This page stays evergreen as the entry point.
+          </p>
+        </div>
+
+        <h2>Start here</h2>
+        <ul>
+          <li><a href="ai-discoverability.html"><strong>AI Discoverability (Primer)</strong></a> — the core concept and checklist.</li>
+          <li><a href="transcripts/index.html"><strong>Transcripts</strong></a> — daily posts (summary + takeaways + transcript + FAQ + schema).</li>
+        </ul>
+
+        <h2>Publishing cadence</h2>
+        <p>
+          We publish roughly one transcript per day. Each post is written to be:
+          <strong>quotable</strong>, <strong>chunkable</strong>, and <strong>machine-readable</strong>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+</html>
+

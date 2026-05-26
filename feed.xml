@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DiscovizLabs Blog</title>
+    <link>https://discovizlabs.com/blog</link>
+    <description>Essays and playbooks on SEO + AI discoverability (GEO).</description>
+    <language>en</language>
+    <atom:link href="https://discovizlabs.com/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Generative Engine Optimization (GEO) vs SEO</title>
+      <link>https://discovizlabs.com/blog/generative-engine-optimization-geo-vs-seo</link>
+      <guid>https://discovizlabs.com/blog/generative-engine-optimization-geo-vs-seo</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>GEO vs SEO: what changes in AI search, what stays the same, and the practical playbook to win visibility in Google and AI-generated answers.</description>
+    </item>
+
+    <item>
+      <title>How to Appear in AI Search Results (ChatGPT, Perplexity, AI Overviews)</title>
+      <link>https://discovizlabs.com/blog/how-to-appear-in-ai-search-results</link>
+      <guid>https://discovizlabs.com/blog/how-to-appear-in-ai-search-results</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>A practical checklist for appearing in AI search results: entity clarity, answer-ready pages, and a citation graph across the web.</description>
+    </item>
+
+    <item>
+      <title>Zero-Click SEO Strategy for AI Overviews (Answer Engine Optimization)</title>
+      <link>https://discovizlabs.com/blog/zero-click-seo-strategy-ai-overviews</link>
+      <guid>https://discovizlabs.com/blog/zero-click-seo-strategy-ai-overviews</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>Zero-click SEO in the AI era: how to optimize for AI Overviews and answer engines using Share of Answer, citations, and answer-ready pages.</description>
+    </item>
+
+    <item>
+      <title>LLM Visibility Optimization: How to Be Mentioned in AI Answers</title>
+      <link>https://discovizlabs.com/blog/llm-visibility-optimization</link>
+      <guid>https://discovizlabs.com/blog/llm-visibility-optimization</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>LLM visibility optimization: a practical playbook to increase brand mentions and citations in AI answers (ChatGPT, Perplexity, AI Overviews) without spam tactics.</description>
+    </item>
+
+    <item>
+      <title>Brand Mentions for AI Discoverability: The Citation Graph Playbook</title>
+      <link>https://discovizlabs.com/blog/brand-mentions-ai-discoverability</link>
+      <guid>https://discovizlabs.com/blog/brand-mentions-ai-discoverability</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>Brand mentions are the unlock for AI discoverability. Learn how citation graphs work and how to earn AI citations without botty spam tactics.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search | DiscovizLabs</title>
+  <meta name="description" content="Search DiscovizLabs posts, transcripts, and resources." />
+  <meta property="og:site_name" content="DiscovizLabs" />
+  <meta property="og:title" content="Search | DiscovizLabs" />
+  <meta property="og:description" content="Search DiscovizLabs posts, transcripts, and resources." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://discovizlabs.com/search" />
+  <meta property="og:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta property="og:image:alt" content="DiscovizLabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Search | DiscovizLabs" />
+  <meta name="twitter:description" content="Search DiscovizLabs posts, transcripts, and resources." />
+  <meta name="twitter:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta name="twitter:image:alt" content="DiscovizLabs" />
+  <link rel="canonical" href="https://discovizlabs.com/search" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Search",
+    "url": "https://discovizlabs.com/search",
+    "isPartOf": { "@type": "WebSite", "name": "DiscovizLabs", "url": "https://discovizlabs.com/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://discovizlabs.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Search", "item": "https://discovizlabs.com/search" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="/" class="logo" aria-label="DiscovizLabs Home">
+        <img class="logo-lockup" src="assets/logo-lockup.webp" alt="DiscovizLabs" height="56" decoding="async" fetchpriority="high">
+        <span class="logo-text">DiscovizLabs</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/transcripts/">Transcripts</a></li>
+        <li class="nav-dropdown">
+          <a href="/research" aria-haspopup="true">Resources <span aria-hidden="true">▾</span></a>
+          <ul class="dropdown-menu" aria-label="Resources">
+            <li><a href="/start-here">Start here</a></li>
+            <li><a href="/glossary">Glossary</a></li>
+            <li><a href="/ai-discoverability">Primer: AI Discoverability</a></li>
+            <li><a href="/seo-ai-discoverability">SEO + AI Discoverability</a></li>
+            <li><a href="/ai-disco-labs">Experiments (AI Disco Labs)</a></li>
+            <li><a href="/research">Research</a></li>
+            <li><a href="/methodology">Method</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/search" class="active">Search</a></li>
+          </ul>
+        </li>
+        <li><a href="/#contact" class="nav-cta">Get Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">Search</h1>
+      <p class="page-subtitle">Fast, simple site search (posts + resources).</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width: 860px;">
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <input id="q" type="search" placeholder="Search… (e.g., GEO, citations, Perplexity)" style="flex:1; min-width: 260px; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.04); color: #fff;" />
+        <button id="clear" class="btn btn-outline" type="button">Clear</button>
+      </div>
+
+      <div style="margin-top:18px; opacity:0.9;">
+        <small id="meta">Type to filter.</small>
+      </div>
+
+      <ul id="results" style="margin-top:16px; line-height:1.75;"></ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© DiscovizLabs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('active');
+      });
+    }
+  </script>
+
+  <script>
+    const pages = [
+      { title: "SEO + AI Discoverability (GEO)", url: "/seo-ai-discoverability", tags: ["seo", "geo", "ai discoverability", "positioning"] },
+      { title: "AI Discoverability (Primer)", url: "/ai-discoverability", tags: ["geo", "ai search", "checklist"] },
+      { title: "Services", url: "/services", tags: ["services", "audit", "optimization"] },
+      { title: "AI Disco Labs", url: "/ai-disco-labs", tags: ["labs", "experiments", "transcripts"] },
+      { title: "Transcripts", url: "/transcripts/", tags: ["transcripts", "daily", "notes"] },
+      { title: "Research", url: "/research", tags: ["research", "notes"] },
+      { title: "Methodology", url: "/methodology", tags: ["share of answer", "measurement", "prompts"] },
+      { title: "Experiments", url: "/experiments", tags: ["experiments", "tests"] },
+      { title: "Blog", url: "/blog", tags: ["blog", "posts"] },
+      { title: "Generative Engine Optimization (GEO) vs SEO", url: "/blog/generative-engine-optimization-geo-vs-seo", tags: ["geo vs seo", "generative engine optimization", "seo"] },
+      { title: "How to appear in AI search results (ChatGPT, Perplexity, AI Overviews)", url: "/blog/how-to-appear-in-ai-search-results", tags: ["ai search", "chatgpt", "perplexity", "ai overviews"] },
+      { title: "Zero-click SEO strategy for AI Overviews (Answer Engine Optimization)", url: "/blog/zero-click-seo-strategy-ai-overviews", tags: ["zero-click", "ai overviews", "answer engine optimization", "citations"] },
+      { title: "LLM visibility optimization: how to be mentioned in AI answers", url: "/blog/llm-visibility-optimization", tags: ["llm visibility", "citations", "share of answer"] },
+      { title: "Brand mentions for AI discoverability: the citation graph playbook", url: "/blog/brand-mentions-ai-discoverability", tags: ["brand mentions", "citation graph", "ai citation optimization"] }
+    ];
+
+    const q = document.getElementById('q');
+    const results = document.getElementById('results');
+    const meta = document.getElementById('meta');
+    const clearBtn = document.getElementById('clear');
+
+    function normalize(value) {
+      return String(value || '').toLowerCase().trim();
+    }
+
+    function scorePage(page, query) {
+      if (!query) return 0;
+      const haystack = normalize(page.title + " " + page.url + " " + (page.tags || []).join(" "));
+      if (haystack.includes(query)) return 3;
+      const parts = query.split(/\s+/).filter(Boolean);
+      let hits = 0;
+      for (const p of parts) if (haystack.includes(p)) hits += 1;
+      return hits ? 1 : 0;
+    }
+
+    function render(query) {
+      const queryNorm = normalize(query);
+      const scored = pages
+        .map(p => ({ p, s: scorePage(p, queryNorm) }))
+        .filter(x => queryNorm ? x.s > 0 : true)
+        .sort((a, b) => b.s - a.s || a.p.title.localeCompare(b.p.title))
+        .slice(0, 50);
+
+      results.innerHTML = '';
+      for (const { p } of scored) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = p.url;
+        a.textContent = p.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      }
+
+      meta.textContent = queryNorm
+        ? `Showing ${scored.length} result(s) for “${query}”.`
+        : `Showing ${scored.length} page(s).`;
+    }
+
+    function getQueryParam() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('q') || '';
+    }
+
+    function setQueryParam(value) {
+      const params = new URLSearchParams(window.location.search);
+      if (value) params.set('q', value);
+      else params.delete('q');
+      const next = params.toString() ? `?${params.toString()}` : '';
+      window.history.replaceState({}, '', `${window.location.pathname}${next}`);
+    }
+
+    q.value = getQueryParam();
+    render(q.value);
+
+    q.addEventListener('input', () => {
+      setQueryParam(q.value);
+      render(q.value);
+    });
+
+    clearBtn.addEventListener('click', () => {
+      q.value = '';
+      setQueryParam('');
+      render('');
+      q.focus();
+    });
+  </script>
+</body>
+</html>

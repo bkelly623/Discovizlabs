@@ -5,8 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Discoverability (GEO) for Local Businesses | DiscovizLabs</title>
   <meta name="description" content="AI discoverability (GEO) explains how AI systems decide which businesses to recommend—and how to win visibility with SEO foundations plus AI-first trust signals." />
+  <meta property="og:site_name" content="DiscovizLabs" />
+  <meta property="og:title" content="AI Discoverability (GEO) for Local Businesses | DiscovizLabs" />
+  <meta property="og:description" content="AI discoverability (GEO) explains how AI systems decide which businesses to recommend—and how to win visibility with SEO foundations plus AI-first trust signals." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://discovizlabs.com/ai-discoverability" />
+  <meta property="og:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta property="og:image:alt" content="DiscovizLabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Discoverability (GEO) for Local Businesses | DiscovizLabs" />
+  <meta name="twitter:description" content="AI discoverability (GEO) explains how AI systems decide which businesses to recommend—and how to win visibility with SEO foundations plus AI-first trust signals." />
+  <meta name="twitter:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta name="twitter:image:alt" content="DiscovizLabs" />
   <link rel="canonical" href="https://discovizlabs.com/ai-discoverability" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://discovizlabs.com/" },
+      { "@type": "ListItem", "position": 2, "name": "AI Discoverability", "item": "https://discovizlabs.com/ai-discoverability" }
+    ]
+  }
+  </script>
 
   <!-- Structured data (kept valid; fill in VideoObject details once the hosted video URL/thumbnail is known) -->
   <script type="application/ld+json">
@@ -82,11 +105,24 @@
       </button>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/ai-discoverability" class="active">AI Discoverability</a></li>
-        <li><a href="/ai-disco-labs">AI Disco Labs</a></li>
-        <li><a href="/transcripts/">Transcripts</a></li>
+        <li><a href="/services">Services</a></li>
         <li><a href="/blog">Blog</a></li>
+        <li><a href="/transcripts/">Transcripts</a></li>
+        <li class="nav-dropdown">
+          <a href="/research" aria-haspopup="true">Resources <span aria-hidden="true">▾</span></a>
+          <ul class="dropdown-menu" aria-label="Resources">
+            <li><a href="/start-here">Start here</a></li>
+            <li><a href="/glossary">Glossary</a></li>
+            <li><a href="/ai-discoverability" class="active">Primer: AI Discoverability</a></li>
+            <li><a href="/seo-ai-discoverability">SEO + AI Discoverability</a></li>
+            <li><a href="/ai-disco-labs">Experiments (AI Disco Labs)</a></li>
+            <li><a href="/research">Research</a></li>
+            <li><a href="/methodology">Method</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/search">Search</a></li>
+          </ul>
+        </li>
+        <li><a href="/#contact" class="nav-cta">Get Audit</a></li>
       </ul>
     </div>
   </nav>
@@ -239,7 +275,7 @@ We'll see you in the next one. It's raining here, I'm going to get inside.
         </p>
 
         <p style="margin-top: 1rem;">
-          Browse: <a href="/transcripts/">Transcripts</a> · <a href="/ai-disco-labs">AI Disco Labs</a>
+          Browse: <a href="/transcripts/">Transcripts</a> · <a href="/ai-disco-labs">Experiments</a>
         </p>
       </div>
     </section>
@@ -253,7 +289,7 @@ We'll see you in the next one. It's raining here, I'm going to get inside.
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
         navToggle.setAttribute('aria-expanded', String(!expanded));
-        navLinks.classList.toggle('open');
+        navLinks.classList.toggle('active');
       });
     }
   </script>

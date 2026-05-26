@@ -5,8 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to Appear in AI Search Results (ChatGPT, Perplexity, AI Overviews) | DiscovizLabs</title>
   <meta name="description" content="A practical checklist for appearing in AI search results: entity clarity, answer-ready pages, and a citation graph across the web." />
+  <meta property="og:site_name" content="DiscovizLabs" />
+  <meta property="og:title" content="How to Appear in AI Search Results (ChatGPT, Perplexity, AI Overviews) | DiscovizLabs" />
+  <meta property="og:description" content="A practical checklist for appearing in AI search results: entity clarity, answer-ready pages, and a citation graph across the web." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://discovizlabs.com/blog/how-to-appear-in-ai-search-results" />
+  <meta property="og:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta property="og:image:alt" content="DiscovizLabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Appear in AI Search Results (ChatGPT, Perplexity, AI Overviews) | DiscovizLabs" />
+  <meta name="twitter:description" content="A practical checklist for appearing in AI search results: entity clarity, answer-ready pages, and a citation graph across the web." />
+  <meta name="twitter:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta name="twitter:image:alt" content="DiscovizLabs" />
   <link rel="canonical" href="https://discovizlabs.com/blog/how-to-appear-in-ai-search-results" />
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="alternate" type="application/rss+xml" title="DiscovizLabs Blog" href="/feed.xml" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://discovizlabs.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://discovizlabs.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Appear in AI search results", "item": "https://discovizlabs.com/blog/how-to-appear-in-ai-search-results" }
+    ]
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,10 +74,29 @@
         <img class="logo-lockup" src="../assets/logo-lockup.webp" alt="DiscovizLabs" height="56" decoding="async" fetchpriority="high">
         <span class="logo-text">DiscovizLabs</span>
       </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links">
-        <li><a href="/blog" class="active">Blog</a></li>
-        <li><a href="/seo-ai-discoverability">SEO + AI</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/services">Services</a></li>
+        <li><a href="/blog" class="active">Blog</a></li>
+        <li><a href="/transcripts/">Transcripts</a></li>
+        <li class="nav-dropdown">
+          <a href="/research" aria-haspopup="true">Resources <span aria-hidden="true">▾</span></a>
+          <ul class="dropdown-menu" aria-label="Resources">
+            <li><a href="/start-here">Start here</a></li>
+            <li><a href="/glossary">Glossary</a></li>
+            <li><a href="/ai-discoverability">Primer: AI Discoverability</a></li>
+            <li><a href="/seo-ai-discoverability">SEO + AI Discoverability</a></li>
+            <li><a href="/ai-disco-labs">Experiments (AI Disco Labs)</a></li>
+            <li><a href="/research">Research</a></li>
+            <li><a href="/methodology">Method</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/search">Search</a></li>
+          </ul>
+        </li>
+        <li><a href="/#contact" class="nav-cta">Get Audit</a></li>
       </ul>
     </div>
   </nav>
@@ -119,6 +162,16 @@
       </div>
     </div>
   </footer>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('active');
+      });
+    }
+  </script>
 </body>
 </html>
-

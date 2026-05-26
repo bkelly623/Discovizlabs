@@ -3,16 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Disco Labs | DiscovizLabs</title>
+  <title>Experiments (AI Disco Labs) | DiscovizLabs</title>
   <meta name="description" content="AI Disco Labs: daily experiments, notes, and transcripts documenting what actually moves AI discoverability (GEO) and modern SEO in the real world." />
+  <meta property="og:site_name" content="DiscovizLabs" />
+  <meta property="og:title" content="Experiments (AI Disco Labs) | DiscovizLabs" />
+  <meta property="og:description" content="AI Disco Labs: daily experiments, notes, and transcripts documenting what actually moves AI discoverability (GEO) and modern SEO in the real world." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://discovizlabs.com/ai-disco-labs" />
+  <meta property="og:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta property="og:image:alt" content="DiscovizLabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Experiments (AI Disco Labs) | DiscovizLabs" />
+  <meta name="twitter:description" content="AI Disco Labs: daily experiments, notes, and transcripts documenting what actually moves AI discoverability (GEO) and modern SEO in the real world." />
+  <meta name="twitter:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta name="twitter:image:alt" content="DiscovizLabs" />
   <link rel="canonical" href="https://discovizlabs.com/ai-disco-labs" />
   <link rel="stylesheet" href="styles.css" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://discovizlabs.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Experiments", "item": "https://discovizlabs.com/ai-disco-labs" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "AI Disco Labs",
+    "name": "Experiments (AI Disco Labs)",
     "description": "Daily experiments and transcripts about AI discoverability (GEO).",
     "url": "https://discovizlabs.com/ai-disco-labs",
     "publisher": {"@type": "Organization", "name": "DiscovizLabs", "url": "https://discovizlabs.com"}
@@ -32,11 +55,24 @@
       </button>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/ai-discoverability">AI Discoverability</a></li>
-        <li><a href="/ai-disco-labs" class="active">AI Disco Labs</a></li>
-        <li><a href="/transcripts/">Transcripts</a></li>
+        <li><a href="/services">Services</a></li>
         <li><a href="/blog">Blog</a></li>
+        <li><a href="/transcripts/">Transcripts</a></li>
+        <li class="nav-dropdown">
+          <a href="/research" aria-haspopup="true">Resources <span aria-hidden="true">▾</span></a>
+          <ul class="dropdown-menu" aria-label="Resources">
+            <li><a href="/start-here">Start here</a></li>
+            <li><a href="/glossary">Glossary</a></li>
+            <li><a href="/ai-discoverability">Primer: AI Discoverability</a></li>
+            <li><a href="/seo-ai-discoverability">SEO + AI Discoverability</a></li>
+            <li><a href="/ai-disco-labs" class="active">Experiments (AI Disco Labs)</a></li>
+            <li><a href="/research">Research</a></li>
+            <li><a href="/methodology">Method</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/search">Search</a></li>
+          </ul>
+        </li>
+        <li><a href="/#contact" class="nav-cta">Get Audit</a></li>
       </ul>
     </div>
   </nav>
@@ -53,13 +89,13 @@
           <span class="badge-dot"></span>
           Daily experiments + transcripts
         </div>
-        <h1 class="hero-title">AI Disco Labs</h1>
+        <h1 class="hero-title">Experiments</h1>
         <p class="hero-subtitle">
           We’re not theorizing. We’re running experiments with real businesses to measure what actually moves AI visibility.
-          This is the public lab notebook.
+          This is the public lab notebook (AI Disco Labs).
         </p>
         <div class="hero-cta-group">
-          <a href="transcripts/index.html" class="btn btn-primary btn-lg">Browse transcripts</a>
+          <a href="/transcripts/" class="btn btn-primary btn-lg">Browse transcripts</a>
           <a href="/ai-discoverability" class="btn btn-outline btn-lg">Read the primer</a>
         </div>
       </div>
@@ -81,7 +117,7 @@
         <h2>Start here</h2>
         <ul>
           <li><a href="/ai-discoverability"><strong>AI Discoverability (Primer)</strong></a> — the core concept and checklist.</li>
-          <li><a href="transcripts/index.html"><strong>Transcripts</strong></a> — daily posts (summary + takeaways + transcript + FAQ + schema).</li>
+          <li><a href="/transcripts/"><strong>Transcripts</strong></a> — daily posts (summary + takeaways + transcript + FAQ + schema).</li>
         </ul>
 
         <h2>Publishing cadence</h2>
@@ -100,7 +136,7 @@
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
         navToggle.setAttribute('aria-expanded', String(!expanded));
-        navLinks.classList.toggle('open');
+        navLinks.classList.toggle('active');
       });
     }
   </script>

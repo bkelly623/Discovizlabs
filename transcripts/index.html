@@ -5,8 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Transcripts | DiscovizLabs</title>
   <meta name="description" content="Daily transcripts from DiscovizLabs: AI discoverability (GEO) experiments, frameworks, and field notes." />
+  <meta property="og:site_name" content="DiscovizLabs" />
+  <meta property="og:title" content="Transcripts | DiscovizLabs" />
+  <meta property="og:description" content="Daily transcripts from DiscovizLabs: AI discoverability (GEO) experiments, frameworks, and field notes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://discovizlabs.com/transcripts" />
+  <meta property="og:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta property="og:image:alt" content="DiscovizLabs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Transcripts | DiscovizLabs" />
+  <meta name="twitter:description" content="Daily transcripts from DiscovizLabs: AI discoverability (GEO) experiments, frameworks, and field notes." />
+  <meta name="twitter:image" content="https://discovizlabs.com/assets/logo-lockup.webp" />
+  <meta name="twitter:image:alt" content="DiscovizLabs" />
   <link rel="canonical" href="https://discovizlabs.com/transcripts" />
   <link rel="stylesheet" href="../styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://discovizlabs.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Transcripts", "item": "https://discovizlabs.com/transcripts" }
+    ]
+  }
+  </script>
 
   <script type="application/ld+json">
   {
@@ -23,7 +46,7 @@
 <body>
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-container">
-      <a href="../index.html" class="logo" aria-label="DiscovizLabs Home">
+      <a href="/" class="logo" aria-label="DiscovizLabs Home">
         <img class="logo-lockup" src="../assets/logo-lockup.webp" alt="DiscovizLabs" height="56" decoding="async" fetchpriority="high" />
         <span class="logo-text">DiscovizLabs</span>
       </a>
@@ -31,11 +54,25 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../ai-discoverability.html">AI Discoverability</a></li>
-        <li><a href="../ai-discoverability-labs.html">AI Disco Labs</a></li>
-        <li><a href="index.html" class="active">Transcripts</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/transcripts/" class="active">Transcripts</a></li>
+        <li class="nav-dropdown">
+          <a href="/research" aria-haspopup="true">Resources <span aria-hidden="true">▾</span></a>
+          <ul class="dropdown-menu" aria-label="Resources">
+            <li><a href="/start-here">Start here</a></li>
+            <li><a href="/glossary">Glossary</a></li>
+            <li><a href="/ai-discoverability">Primer: AI Discoverability</a></li>
+            <li><a href="/seo-ai-discoverability">SEO + AI Discoverability</a></li>
+            <li><a href="/ai-disco-labs">Experiments (AI Disco Labs)</a></li>
+            <li><a href="/research">Research</a></li>
+            <li><a href="/methodology">Method</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/search">Search</a></li>
+          </ul>
+        </li>
+        <li><a href="/#contact" class="nav-cta">Get Audit</a></li>
       </ul>
     </div>
   </nav>
@@ -95,7 +132,7 @@
       navToggle.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
         navToggle.setAttribute('aria-expanded', String(!expanded));
-        navLinks.classList.toggle('open');
+        navLinks.classList.toggle('active');
       });
     }
   </script>

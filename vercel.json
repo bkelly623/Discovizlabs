@@ -1,0 +1,41 @@
+{
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/ai-discoverability", "destination": "/ai-discoverability.html" },
+    { "source": "/ai-disco-labs", "destination": "/ai-discoverability-labs.html" },
+    { "source": "/services", "destination": "/services/index.html" },
+    { "source": "/services/ai-discoverability-audit", "destination": "/services/ai-discoverability-audit.html" },
+    {
+      "source": "/services/seo-ai-discoverability-optimization",
+      "destination": "/services/seo-ai-discoverability-optimization.html"
+    },
+    { "source": "/services/ongoing-authority", "destination": "/services/ongoing-authority.html" },
+    { "source": "/seo-ai-discoverability", "destination": "/seo-ai-discoverability.html" },
+    { "source": "/research", "destination": "/research/index.html" },
+    { "source": "/experiments", "destination": "/experiments/index.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    {
+      "source": "/blog/generative-engine-optimization-geo-vs-seo",
+      "destination": "/blog/generative-engine-optimization-geo-vs-seo.html"
+    },
+    {
+      "source": "/blog/how-to-appear-in-ai-search-results",
+      "destination": "/blog/how-to-appear-in-ai-search-results.html"
+    },
+    {
+      "source": "/blog/zero-click-seo-strategy-ai-overviews",
+      "destination": "/blog/zero-click-seo-strategy-ai-overviews.html"
+    },
+    {
+      "source": "/blog/llm-visibility-optimization",
+      "destination": "/blog/llm-visibility-optimization.html"
+    },
+    {
+      "source": "/blog/brand-mentions-ai-discoverability",
+      "destination": "/blog/brand-mentions-ai-discoverability.html"
+    },
+    { "source": "/methodology", "destination": "/methodology/index.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" }
+  ]
+}

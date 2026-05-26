@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | DiscovizLabs</title>
+  <meta name="description" content="High-end services for SEO + AI discoverability (GEO): audits, strategic optimization, and ongoing authority building." />
+  <link rel="canonical" href="https://discovizlabs.com/services" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="/" class="logo" aria-label="DiscovizLabs Home">
+        <img class="logo-lockup" src="../assets/logo-lockup.webp" alt="DiscovizLabs" height="56" decoding="async" fetchpriority="high">
+        <span class="logo-text">DiscovizLabs</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/ai-discoverability">AI Discoverability</a></li>
+        <li><a href="/seo-ai-discoverability">SEO + AI</a></li>
+        <li><a href="/services" class="active">Services</a></li>
+        <li><a href="/#contact" class="nav-cta">Get Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">Services</h1>
+      <p class="page-subtitle">High-end execution for SEO + AI discoverability. Built to be measurable, not mystical.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cards-grid grid-3">
+          <article class="card card-featured">
+            <h3 class="card-title">AI Discoverability Audit</h3>
+            <p class="card-text">A diagnostic of how AI systems represent you today, plus the SEO foundations that control what they can learn.</p>
+            <a class="btn btn-primary" href="/services/ai-discoverability-audit">View details</a>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Strategic Optimization</h3>
+            <p class="card-text">Fixes that improve indexability, comprehension, and citation probability across the web.</p>
+            <a class="btn btn-outline" href="/services/seo-ai-discoverability-optimization">View details</a>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Ongoing Authority</h3>
+            <p class="card-text">A monthly loop to grow Share of Answer through content, citations, and experiments.</p>
+            <a class="btn btn-outline" href="/services/ongoing-authority">View details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© DiscovizLabs. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.nav-links')?.classList.toggle('active');
+      this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+    });
+  </script>
+</body>
+</html>
+

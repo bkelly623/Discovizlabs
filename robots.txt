@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://discovizlabs.com/sitemap.xml
+

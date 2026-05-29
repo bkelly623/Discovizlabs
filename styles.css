@@ -71,12 +71,33 @@ body {
   overflow-x: hidden;
 }
 
+.sr-only{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0, 0, 0, 0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+
 /* Episode pages */
 .jump-links{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   margin:18px 0 26px;
+}
+.jump-links--sticky{
+  position: sticky;
+  top: 86px;
+  z-index: 15;
+  padding: 10px 0;
+  background: linear-gradient(180deg, rgba(10,14,26,.95) 0%, rgba(10,14,26,.65) 70%, rgba(10,14,26,0) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .jump-links a{
   display:inline-flex;
@@ -123,6 +144,179 @@ body {
   line-height: 1.6;
   opacity: .92;
   max-width: 80ch;
+}
+
+/* Episodes library */
+.episodes-toolbar{
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 18px 0 22px;
+}
+.episodes-search{
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text-primary);
+  outline: none;
+}
+.episodes-search::placeholder{
+  color: rgba(226,232,240,.65);
+}
+.episodes-search:focus{
+  border-color: rgba(139, 92, 246, .55);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, .15);
+}
+.episodes-hint{
+  font-size: 13px;
+  opacity: .8;
+}
+.episode-meta{
+  display:flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.episode-pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 650;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  color: var(--text);
+}
+.episode-tags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 650;
+  background: rgba(59,130,246,.10);
+  border: 1px solid rgba(59,130,246,.22);
+  color: rgba(226,232,240,.92);
+}
+.episodes-template{
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  padding: 14px 14px;
+  background: rgba(255,255,255,.03);
+}
+
+/* CTA blocks */
+.cta-block{
+  margin: 22px 0 10px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: radial-gradient(1200px 500px at 10% 20%, rgba(139,92,246,.18), transparent 40%),
+              radial-gradient(900px 400px at 90% 30%, rgba(59,130,246,.14), transparent 45%),
+              rgba(255,255,255,.03);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.cta-title{
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+.cta-subtitle{
+  margin: 0;
+  opacity: .9;
+}
+.cta-actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.cta-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(139,92,246,1), rgba(59,130,246,1));
+  color: #0b1020;
+  font-weight: 800;
+  text-decoration:none;
+  border: 0;
+}
+.cta-primary:hover{
+  filter: brightness(1.05);
+}
+.cta-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text-primary);
+  text-decoration:none;
+  font-weight: 700;
+}
+.cta-secondary:hover{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.18);
+}
+
+/* Next/related modules */
+.episode-next .next-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.next-card{
+  display:block;
+  padding: 16px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  text-decoration:none;
+}
+.next-card:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.18);
+}
+.next-eyebrow{
+  font-size: 12px;
+  opacity: .8;
+  margin-bottom: 6px;
+}
+.next-title{
+  font-weight: 850;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.next-desc{
+  color: var(--text-secondary);
+}
+
+@media (max-width: 700px){
+  .cta-block{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cta-actions{
+    justify-content: flex-start;
+  }
+  .episode-next .next-grid{
+    grid-template-columns: 1fr;
+  }
 }
 
 ::selection {

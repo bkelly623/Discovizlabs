@@ -83,7 +83,7 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          Daily posts
+          Episode library
         </div>
         <h1 class="hero-title">Episodes</h1>
         <p class="hero-subtitle">Watch → summary → takeaways → transcript (one URL per episode).</p>
@@ -100,10 +100,25 @@
           <p class="section-subtitle">Start here, then explore.</p>
         </div>
 
-        <div class="cards-grid grid-3">
-          <article class="card">
+        <div class="episodes-toolbar" role="search">
+          <label class="sr-only" for="episode-search">Search episodes</label>
+          <input id="episode-search" class="episodes-search" type="search" placeholder="Search episodes (e.g., “GEO”, “local”, “trust signals”)…" autocomplete="off" />
+          <div class="episodes-hint">Tip: search titles + tags.</div>
+        </div>
+
+        <div class="cards-grid grid-3" id="episodes-grid">
+          <article class="card episode-card" data-title="AI Discoverability: How AI Decides Who Gets Recommended" data-tags="primer geo local businesses trust signals">
+            <div class="episode-meta">
+              <span class="episode-pill">8:11</span>
+              <span class="episode-pill">~6 min read</span>
+            </div>
             <h3 class="card-title"><a href="../ai-discoverability.html">AI Discoverability: How AI Decides Who Gets Recommended</a></h3>
-            <p class="card-description">Watch + summary + takeaways + FAQ + transcript (and schema).</p>
+            <p class="card-description">If AI doesn’t know you—or doesn’t trust you—you’re invisible. Here’s how to fix it.</p>
+            <div class="episode-tags" aria-label="Episode tags">
+              <span class="tag">Primer</span>
+              <span class="tag">GEO</span>
+              <span class="tag">Local</span>
+            </div>
           </article>
         </div>
 
@@ -113,10 +128,12 @@
 
         <hr style="margin: 2rem 0; opacity: .25;" />
 
-        <h2>Template (for daily transcript posts)</h2>
-        <p style="opacity: .9;">
-          Each transcript post should include: <strong>executive summary</strong>, <strong>key takeaways</strong>, a short <strong>FAQ</strong>, the <strong>transcript</strong>, and <strong>VideoObject schema</strong>.
-        </p>
+        <details class="episodes-template">
+          <summary><strong>Episode template</strong> (internal checklist)</summary>
+          <p style="opacity: .9; margin-top: 0.75rem;">
+            Each episode page should include: <strong>watch embed</strong>, a tight <strong>executive summary</strong>, <strong>key takeaways</strong>, a short <strong>FAQ</strong>, the <strong>transcript</strong>, and <strong>VideoObject schema</strong>.
+          </p>
+        </details>
       </div>
     </section>
   </main>
@@ -129,6 +146,24 @@
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
         navToggle.setAttribute('aria-expanded', String(!expanded));
         navLinks.classList.toggle('active');
+      });
+    }
+
+    const searchInput = document.getElementById('episode-search');
+    const episodesGrid = document.getElementById('episodes-grid');
+    if (searchInput && episodesGrid) {
+      const cards = Array.from(episodesGrid.querySelectorAll('.episode-card'));
+      const normalize = (value) => String(value || '').toLowerCase().trim();
+      searchInput.addEventListener('input', () => {
+        const query = normalize(searchInput.value);
+        let anyVisible = false;
+        for (const card of cards) {
+          const haystack = normalize(`${card.getAttribute('data-title')} ${card.getAttribute('data-tags')}`);
+          const visible = query.length === 0 || haystack.includes(query);
+          card.style.display = visible ? '' : 'none';
+          anyVisible = anyVisible || visible;
+        }
+        episodesGrid.setAttribute('data-empty', anyVisible ? 'false' : 'true');
       });
     }
   </script>
